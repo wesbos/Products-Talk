@@ -1,0 +1,188 @@
+@import "_deps"
+
+yellow = #FFDD00
+orange = #FF9D00
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.slides > article
+  padding 50px
+  &:before
+    content ''
+    display block
+    width 100%
+    height 100%
+    position absolute
+    filter grayscale(100%) contrast(200%)
+    background:url(images/3.jpg); // blacksmith
+    background-size cover
+    top 0
+    left 0
+    z-index -2
+  &:after
+    z-index -1
+    content ''
+    display block
+    width 100%
+    height 100%
+    position absolute
+    top 0
+    left 0
+    opacity 0.5
+  &.plain
+    &:before, &:after
+      display none
+
+// Random Number Mixin
+random(min,max)
+  return floor(math(0, 'random')*(max - min + 1) + min)
+
+// Random Colour Mixin
+randomColor()
+  return rgb(random(0,255),random(0,255),random(0,255))
+
+// Some Nice colour combos
+combos = (#5592da #95ece3) (#29519e #94eced) (#63e3b0 #b5cdde) (#11feec #FF00E0) (#006C8D #006C8D) (#20b5be #28e8d5) (#f7345d #a82866) (#6aa4e1 #ae5ceb) (#fa7cb6 #b64e9c) (#c80594 #2d22ae) (#2decf5 #52aeea) (#d07dd7 #e1e34a) (#3456fd #14e839) (#3073b8 #3ac76c)
+
+// Random Gradient Picker
+randomGradient()
+  n = random(1,13)
+  combo = combos[n]
+  return combo
+
+for num in 1...40
+  path = "images/"+ random(1,10)+".jpg"
+  combo = randomGradient();
+  .slides > article:nth-child(39n+{num})
+    &:before
+      background-image url(path)
+      content combo[1]
+    &:after
+      background-image linear-gradient(random(0,360)deg, black 0%, grey 100%);
+
+h1,h2,h3,h4,h5,h6
+  font-family 'Breathtaker'
+  font-family 'Brux', sans-serif
+  font-weight 100
+  letter-spacing 1px
+  line-height 1.1
+  text-shadow 2px 2px 0 rgba(0,0,0,0.3)
+  margin 15px 0
+  transform skew(0, -3deg)
+
+p, a, li
+  text-shadow 2px 2px 0 rgba(0,0,0,0.5)
+  margin 15px 0
+
+p, li, small
+  color white
+  font-size 50px
+  font-weight 300
+
+.sub
+  font-family 'raleway'
+  transform skew(0, -8deg)
+  font-size 60px
+
+small
+  font-size 25px
+
+h1
+  transform skew(0, -8deg)
+  font-size 260px
+  color yellow
+  a
+    text-decoration none
+    font-size 20px
+    color black
+    padding-left 10px
+
+h2
+  font-size 160px
+  color yellow
+  margin 0
+
+.large
+  font-size 200px
+
+.big
+  font-size 250px
+
+.huge
+  font-size 450px
+
+h3
+  font-size 70px
+  color yellow
+  line-height 1.5
+
+h4
+  color yellow
+  font-size 50px
+
+.halves
+  width 100%
+
+.half
+  width 50%
+
+
+img.wide
+  width 100%
+  height auto
+  max-height none
+
+img.high
+  width auto
+  height 100%
+  max-height 1200px
+
+.hl
+  color yellow
+
+article.treats
+  h1
+    margin-bottom 90px
+    font-size 250px
+    // color orange
+
+
+.flex
+  display flex !important
+  & > *
+    flex 1
+    &:before
+      content  ''
+
+
+.emoji
+  font-size 116px
+  font-family serif
+
+
+// Smaller Screens
+body.square
+  .slides
+    & > article
+      w = 1024
+      h = 768
+      width w px
+      height h px
+      margin-left (w/2) * -1px
+      margin-top (h/2) * -1px
+      border-radius 0
+      h2
+        font-size 110px
+      p, li, small
+        font-size 30px
+      .big
+        font-size 180px
+      .large
+        font-size 140px
+      .huge
+        font-size 220px
