@@ -33,7 +33,7 @@ html {
     position absolute
     top 0
     left 0
-    opacity 0.5
+    opacity 0.7
   &.plain
     &:before, &:after
       display none
@@ -63,7 +63,7 @@ for num in 1...40
       background-image url(path)
       content combo[1]
     &:after
-      background-image linear-gradient(random(0,360)deg, black 0%, grey 100%);
+      background-image linear-gradient(random(0,360)deg, black 0%, darken(grey,75%) 100%);
 
 h1,h2,h3,h4,h5,h6
   font-family 'Breathtaker'
@@ -81,7 +81,8 @@ p, a, li
 
 p, li, small
   color white
-  font-size 50px
+  font-size 70px
+  text-transform uppercase
   font-weight 300
 
 .sub
