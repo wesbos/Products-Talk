@@ -13,33 +13,11 @@ var download = function(callback){
 
 
 var images = [
-"http://wes.io/fiJ1/content",
-"http://wes.io/fif3/content",
-"http://wes.io/fi6D/content",
-"http://wes.io/fiWU/content",
-"http://wes.io/fi97/content",
-"http://wes.io/fiXu/content",
-"http://wes.io/fiMm/content",
-"http://wes.io/fiNl/content",
-"http://wes.io/fi4v/content",
-"http://wes.io/fi2a/content",
-"http://wes.io/fhzK/content",
-"http://wes.io/fiFu/content",
-"http://wes.io/fiLx/content",
-"http://wes.io/fi1M/content",
-"http://wes.io/fi0r/content",
-"http://wes.io/fi1b/content",
-"http://wes.io/fiYI/content",
-"http://wes.io/fiAX/content",
-"http://wes.io/ff1g/content",
-"http://wes.io/ff95/content",
-"http://wes.io/feqZ/content",
-"http://wes.io/ff4H/content",
-"http://wes.io/fnLG/content",
-"http://wes.io/fn9f/content",
-"http://wes.io/fnL7/content",
-"http://wes.io/ffK7/content",
-"http://wes.io/fmxy/content",
+"http://wes.io/fovg/content",
+"http://wes.io/fop3/content",
+"http://wes.io/fw4x/content",
+"http://wes.io/fwf8/content",
+"http://wes.io/fuyf/content",
 ];
 
 function start() {
