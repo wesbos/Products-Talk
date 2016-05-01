@@ -3,6 +3,19 @@
 yellow = #FFDD00
 orange = #FF9D00
 
+@font-face {
+    font-family: 'bruxregular';
+    src: url('fonts/brux-regular-webfont.eot');
+    src: url('fonts/brux-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brux-regular-webfont.woff2') format('woff2'),
+         url('fonts/brux-regular-webfont.woff') format('woff'),
+         url('fonts/brux-regular-webfont.ttf') format('truetype'),
+         url('fonts/brux-regular-webfont.svg#bruxregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html {
   box-sizing: border-box;
 }
@@ -66,8 +79,7 @@ for num in 1...40
       background-image linear-gradient(random(0,360)deg, black 0%, darken(grey,75%) 100%);
 
 h1,h2,h3,h4,h5,h6
-  font-family 'Breathtaker'
-  font-family 'Brux', sans-serif
+  font-family 'bruxregular', sans-serif
   font-weight 100
   letter-spacing 1px
   line-height 1.1
